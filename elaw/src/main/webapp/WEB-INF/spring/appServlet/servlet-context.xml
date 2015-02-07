@@ -16,12 +16,26 @@
 	<resources mapping="/resources/**" location="/resources/" />
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
-	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<!-- 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
-	
+	 -->
 	<context:component-scan base-package="hr.fname.elaw" />
+	
+	<!-- Konfiguracija view resolver-a za Apache Tiles -->
+	<beans:bean id="tilesViewResolver" class="org.springframework.web.servlet.view.tiles3.TilesViewResolver"/>
+	
+	<!-- TilesConfigurer učitava definicijsku datoteku i čini ju dostupnu TilesViewResolver-u da iz nje razluči View-ove
+	 -->
+	<beans:bean	id="tilesConfigurer"
+        class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+        <beans:property name="definitions">
+            <beans:list>
+                <beans:value>/WEB-INF/tiles/tiles-definitions.xml</beans:value>
+            </beans:list>
+        </beans:property>
+	</beans:bean>
 	
 	
 	
