@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	
+	<definition name="defaultTemplate" template="/WEB-INF/views/template/baseLayout.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/template/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/template/menu.jsp" />
+        <put-attribute name="messages" value="/WEB-INF/views/template/messages.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/views/template/footer.jsp" />
+        <put-attribute name="content" value="" />
+    </definition>
+     
+     <definition name="forma" extends="defaultTemplate">
+    	<put-attribute name="content" value="/WEB-INF/views/jsp/home.jsp" />
+    	<put-attribute name="menuItem" value="1" />
+    </definition>
+    
+     <definition name="link1view" extends="defaultTemplate">
+    	<put-attribute name="content" value="/WEB-INF/views/jsp/link1.jsp" />
+    	<put-attribute name="menuItem" value="2" />
+    </definition>
+   
+    <definition name="link2view" extends="defaultTemplate">
+    	<put-attribute name="content" value="/WEB-INF/views/jsp/link2.jsp" />
+    	<put-attribute name="menuItem" value="3" />
+    </definition>
+    
+     <definition name="link3view" extends="defaultTemplate">
+    	<put-attribute name="content" value="/WEB-INF/views/jsp/link3.jsp" />
+    	<put-attribute name="menuItem" value="4" />
+    </definition>
+     
+    <definition name="home" template="/WEB-INF/views/jsp/home.jsp" />
+    
+    
+</tiles-definitions>
