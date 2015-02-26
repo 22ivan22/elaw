@@ -10,4 +10,18 @@
 
 
 
-Ovdje nema ničega jer nemamo specifikaciju
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12"> 
+		<form action="<c:url value="/getUser" />" method="GET">
+		
+   			 <input type="submit" name="action" value="Dohvati" />
+		</form>
+		
+		</div>
+		
+	</div>
+
+</div>

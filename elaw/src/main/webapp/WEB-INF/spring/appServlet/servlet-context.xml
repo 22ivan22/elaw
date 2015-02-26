@@ -21,8 +21,9 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	 -->
-	<context:component-scan base-package="hr.fname.elaw" />
-	
+	<context:component-scan base-package="hr.fname.elaw"/>
+
+
 	<!-- Konfiguracija view resolver-a za Apache Tiles -->
 	<beans:bean id="tilesViewResolver" class="org.springframework.web.servlet.view.tiles3.TilesViewResolver"/>
 	

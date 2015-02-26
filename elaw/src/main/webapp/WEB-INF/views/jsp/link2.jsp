@@ -10,4 +10,4 @@
 
 
 
-Ni ovdje nema ničega jer je teško raditi bez specifikacije :P
+${korisnici.name}

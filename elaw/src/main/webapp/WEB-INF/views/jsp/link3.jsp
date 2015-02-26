@@ -8,6 +8,7 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
 
+<c:url var="addlogout" value="/logout"></c:url>
 <script>
 
 $(function () {
@@ -30,7 +31,10 @@ $(function () {
 	});	  
 	   		 
 });
-	
+function formSubmit() {
+	document.getElementById("logoutForm").submit();
+}
+
 </script>
 
 <div class="panel panel-primary">
@@ -80,7 +84,18 @@ $(function () {
 					</div>
 				</div> 
 	</div> 
-
+	<c:url value="/j_spring_security_logout" var="logoutUrl" />
+		<form action="${logoutUrl}" method="post" id="logoutForm">
+			<input type="hidden" name="${_csrf.parameterName}"
+				value="${_csrf.token}" />
+	</form>
+	<c:if test="${pageContext.request.userPrincipal.name != null}">
+			<h2>
+				User : ${pageContext.request.userPrincipal.name} | <a
+					href="javascript:formSubmit()"> Logout</a>
+			</h2>
+		</c:if>
+	
 </div>
 	
 </div>
