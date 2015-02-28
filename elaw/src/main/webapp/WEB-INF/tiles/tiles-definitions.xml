@@ -26,8 +26,13 @@
 		<put-attribute name="menuItem" value="2" />
 	</definition>
 
-	<definition name="locationView" extends="baseLayout">
-		<put-attribute name="content" value="/WEB-INF/views/jsp/location.jsp" />
+	<definition name="clientDetails" template="/WEB-INF/views/jsp/clientDetails.jsp" />
+	<definition name="identityCard" template="/WEB-INF/views/jsp/identityCard.jsp" />
+	<definition name="locationView" template="/WEB-INF/views/jsp/location.jsp" />
+	<definition name="passport" template="/WEB-INF/views/jsp/passport.jsp" />
+
+	<definition name="clientInsert" extends="baseLayout">
+		<put-attribute name="content" value="/WEB-INF/views/jsp/clientInsert.jsp" />
 		<put-attribute name="menuItem" value="3" />
 	</definition>
 

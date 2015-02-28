@@ -2,10 +2,11 @@ package hr.fname.elaw.controller;
 
 import java.util.List;
 
-import hr.fname.elaw.form.LocationInsertForm;
+import hr.fname.elaw.form.ClientInsertForm;
 import hr.fname.elaw.model.Country;
 import hr.fname.elaw.model.District;
 import hr.fname.elaw.service.LocationService;
+
 
 //import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,15 +25,15 @@ public class LocationController {
 	@Autowired
 	private LocationService locationService;
 	
-	@RequestMapping(value = "/location", method = RequestMethod.GET)
+	@RequestMapping(value = "/clientInsert", method = RequestMethod.GET)
 	public ModelAndView getCountries(Model model) {
 		
 		ModelAndView modelAndView = new ModelAndView();
-		model.addAttribute("locationInsertForm", new LocationInsertForm());
+		model.addAttribute("clientInsertForm", new ClientInsertForm());
 		List<Country> countries = locationService.getCountries();
 		model.addAttribute("countryList",countries);
 		
-		modelAndView.setViewName("locationView");
+		modelAndView.setViewName("clientInsert");
 		
 		return modelAndView;
 	}

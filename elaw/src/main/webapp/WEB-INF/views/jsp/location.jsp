@@ -8,47 +8,46 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
 
-<c:url value="/location/insert" var="locationInsertURL" />
-<c:url value="/location/getCountryDistricts" var="getCountryDistrictsURL" />
-<c:url value="/location/getDistrictRegions" var="getDistrictRegionsURL" />
-<c:url value="/location/getRegionSettlements" var="getRegionSettlementsURL" />
-
-
-<sf:form action="${locationInsertURL}" commandName="locationInsertForm">
-
-	<div class="row">
-		<div class="form-group col-md-3">
-		    <label for="countryCB" class="control-label">Država</label>
-	    	<sf:select id="countryCB" path="countryId">
-				<sf:option value="" />
-				<sf:options items="${countryList}" itemValue="id" itemLabel="nameCro" />
-			</sf:select>
-	  	</div>
-	</div>
-  
-  	<div class="row">
-		<div class="form-group col-md-3">
-	    	<label for="districtCB" class="control-label">Županija</label>
-	    	<sf:select id="districtCB" path="districtId"></sf:select>
-	  	</div>
-	 </div>
-	 
-	 <div class="row">
-		<div class="form-group col-md-3">
-	    	<label for="regionCB" class="control-label">Općina</label>
-	    	<sf:select id="regionCB" path="regionId"></sf:select>
-	  	</div>
-	 </div>
-	 
-	 <div class="row">
-		<div class="form-group col-md-3">
-	    	<label for="settlementCB" class="control-label">Naselje</label>
-	    	<sf:select id="settlementCB" path="settlementId"></sf:select>
-	  	</div>
-	 </div>
-  
- </sf:form>
-
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Adresa</h3>
+  </div>
+  <div class="panel-body">
+	   
+	
+		<div class="row">
+			<div class="form-group col-md-3">
+			    <label for="countryCB" class="control-label">Država</label>
+		    	<sf:select id="countryCB" path="countryId">
+					<sf:option value="" />
+					<sf:options items="${countryList}" itemValue="id" itemLabel="nameCro" />
+				</sf:select>
+		  	</div>
+		</div>
+	  
+	  	<div class="row">
+			<div class="form-group col-md-3">
+		    	<label for="districtCB" class="control-label">Županija</label>
+		    	<sf:select id="districtCB" path="districtId"></sf:select>
+		  	</div>
+		 </div>
+		 
+		 <div class="row">
+			<div class="form-group col-md-3">
+		    	<label for="regionCB" class="control-label">Općina</label>
+		    	<sf:select id="regionCB" path="regionId"></sf:select>
+		  	</div>
+		 </div>
+		 
+		 <div class="row">
+			<div class="form-group col-md-3">
+		    	<label for="settlementCB" class="control-label">Naselje</label>
+		    	<sf:select id="settlementCB" path="settlementId"></sf:select>
+		  	</div>
+		 </div>
+	  
+  </div>
+</div>
 
 
 <script type="text/javascript">

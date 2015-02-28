@@ -1,6 +1,5 @@
 package hr.fname.elaw.controller;
 
-import hr.fname.elaw.form.LocationInsertForm;
 import hr.fname.elaw.model.Country;
 import hr.fname.elaw.model.User;
 import hr.fname.elaw.service.LocationService;

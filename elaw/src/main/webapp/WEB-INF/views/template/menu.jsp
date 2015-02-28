@@ -12,7 +12,7 @@
 	<div class="list-group">
 	<a class="list-group-item<c:if test="${menuItem eq 1}" > active</c:if>" href="<c:url value="/" />"><i class="fa fa-home fa-fw"></i>&nbsp; Početna</a>
 	<a class="list-group-item<c:if test="${menuItem eq 2}" > active</c:if>" href="<c:url value="/link1" />"><i class="fa fa-calendar fa-fw"></i>&nbsp; Link 1</a>
-	<a class="list-group-item<c:if test="${menuItem eq 3}" > active</c:if>" href="<c:url value="/location" />"><i class="fa fa-building-o fa-fw"></i>&nbsp; Location</a>
+	<a class="list-group-item<c:if test="${menuItem eq 3}" > active</c:if>" href="<c:url value="/clientInsert" />"><i class="fa fa-user-plus fa-fw"></i>&nbsp; Unos klijenta</a>
 	<a class="list-group-item<c:if test="${menuItem eq 4}" > active</c:if>" href="<c:url value="/link3" />"><i class="fa fa-coffee fa-fw"></i>&nbsp; Link 3</a>
 	
 	</div>
